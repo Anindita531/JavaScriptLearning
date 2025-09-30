@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html lang="en">    
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>First JavaScript Example</title>
+        <link rel="stylesheet" href="styles.css">
+    </head>
+    <body>
+        <h1>Hello, JavaScript!</h1>
+        <script>
+            // Variable Declaration in JavaScript
+            // var, let, const
+
+            // Using var
+            var name = "Alice";
+            var age = 25;
+            console.log("Using var - Name: " + name + ", Age: " + age);
+
+            // Using let
+            let city = "New York";
+            let country = "USA";
+            console.log("Using let - City: " + city + ", Country: " + country);
+            
+            // Using const
+            const pi = 3.14;
+            const gravity = 9.8;
+            console.log("Using const - Pi: " + pi + ", Gravity: " + gravity);
+            const myname = "Anindita";
+            console.log(myname);
+            console.log(typeof myname);
+            console.log(myname.charAt(0));
+            console.log(myname.toUpperCase());
+            console.log(myname.toLowerCase());
+            console.log(myname.length);
+            console.log(myname.includes("dita"));
+            console.log(myname.replace("Anindita", "Anu"));
+            console.log(myname.slice(0,4));
+            console.log(myname.split(""));
+            console.log(myname.split("n"));
+            console.log(myname.indexOf("n"));
+            console.log(myname.lastIndexOf("n"));
+            console.log(myname.concat(" is a good "));
+            console.log(myname.startsWith("A"));
+            console.log(myname.endsWith("a"));
+            console.log(myname.repeat(3));
+            console.log(myname.trim());
+            console.log(myname.trim().length);
+            console.log(myname.charAt(myname.length - 1));
+            console.log(myname.charCodeAt(3));
+            console.log(String.fromCharCode(65));
+            console.log(myname.search("n"));
+            console.log(myname.match("n"));
+          
+            // Demonstrating scope
+        
+                var varVariable = "I am a var variable";
+                let letVariable = "I am a let variable";
+                const constVariable = "I am a const variable";
+                console.log(varVariable); // Accessible here
+                console.log(letVariable); // Accessible here
+                console.log(constVariable); // Accessible here
+        
+            console.log(varVariable); // Accessible here
+            // console.log(letVariable); // Uncaught ReferenceError: letVariable is not defined
+            // console.log(constVariable); // Uncaught ReferenceError: constVariable is not defined
+        </script>
+    </body>
+</html>

@@ -1,0 +1,45 @@
+.body{
+background:#f9f8f9;
+}
+.container{
+margin:50px;
+
+}
+.calculatorcontainer{font-size:20px;
+box-shadow :0 14px 16px rgba(0,0,187,0.4);
+ padding:20px;
+item-alignment:center;
+max-height:600px;
+max-width:400px;
+color:#6f4f8f;
+background-color:lightpink;
+ border-radius: 50px;
+}
+p{
+font-size:40px;
+}
+.numbtn{
+color:#000;
+ padding:20px;
+font-size:20px;
+border-radius :10px;
+background:#f9f8f9;
+margin-left:10px;
+margin-top:10px;
+cursor :pointer;
+transition:background 0.3s ease;
+box-shadow :0 0 2px #b38e66, 0 0 3px #ed4b5c;
+
+}
+ #inputnumber.placeholder{
+font-size:90px;
+}
+#inputnumber, #inputnumber.textarea{
+  padding-top: 40px;font-size:20px;
+  padding-left: 60px;
+  padding-right: 100px;
+  color:lightorange ;
+background-color:lightorange;
+  border: 1px solid #ccc;
+  border-radius: 5px;
+}

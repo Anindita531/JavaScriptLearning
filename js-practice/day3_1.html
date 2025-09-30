@@ -1,0 +1,103 @@
+<!DOCTYPE html>
+<html>
+<head>
+<link  <link rel="stylesheet" href="calculator.css">
+ <title></title></head>
+<div class="container">
+<div class="calculatorcontainer">
+<p >Simple Calculator</p>
+<input id="inputnumber" type ="text" placeholder="O      			 O">
+<button class="numbtn" onClick="addScreen(this)">1</button>
+<button class="numbtn" onClick="addScreen(this)">2</button>
+<button class="numbtn" onClick="addScreen(this)">3</button>
+<button class="numbtn" onClick="addScreen(this)">4</button>
+</div>
+<div class="calculatorcontainer">
+<button class="numbtn" onClick="addScreen(this)">5</button>
+<button class="numbtn" onClick="addScreen(this)">6</button>
+<button class="numbtn" onClick="addScreen(this)">7</button>
+<button class="numbtn" onClick="addScreen(this)">8</button>
+</div>
+<div class="calculatorcontainer">
+<button class="numbtn" onClick="addScreen(this)">9</button>
+<button class="numbtn" onClick="addScreen(this)">0</button>
+<button class="numbtn" onClick="addfunc()">+</button>
+<button class="numbtn" onClick="minfunc()">-</button>
+</div>
+<div class="calculatorcontainer">
+<button class="numbtn" onClick="divfunc()">/</button>
+<button class="numbtn" onClick="multfunc()">*</button>
+<button class="numbtn" onClick="clearInput()">C</button>
+<button class="numbtn" onClick="calculate()">=</button>
+</div>
+</div>
+<body>
+<script>
+let num1='';
+let operator ='';
+function addScreen(button){
+var input=document.getElementById("inputnumber");
+input.value+=button.textContent;
+}
+function addfunc(){
+num1=document.getElementById("inputnumber").value;
+operator='+';
+document.getElementById("inputnumber").value='';
+}
+function minfunc(){
+num1=document.getElementById("inputnumber").value;
+operator='-';
+document.getElementById("inputnumber").value='';
+}
+function multfunc(){
+num1=document.getElementById("inputnumber").value;
+operator='*';
+document.getElementById("inputnumber").value='';
+}
+function divfunc(){
+num1=document.getElementById("inputnumber").value;
+operator='/';
+document.getElementById("inputnumber").value='';
+}
+function calculate(){
+let num2=document.getElementById("inputnumber").value;
+let result ='';
+switch(operator){
+case '+':
+console.log(num1);console.log(num2);
+result=parseFloat(num1)+parseFloat(num2);
+document.getElementById("inputnumber").value=result;
+
+break ;
+case '-':
+console.log(num1);console.log(num2);
+result=parseFloat(num1)-parseFloat(num2);
+document.getElementById("inputnumber").value=result;
+console.log(result);
+break ;
+
+case '*':
+ 
+result=parseFloat(num1)*parseFloat(num2);
+document.getElementById("inputnumber").value=result;
+
+break ;
+case '/':
+ 
+result=parseFloat(num1)/parseFloat(num2);
+document.getElementById("inputnumber").value=result;
+ 
+break ;
+}
+
+}
+function clearInput(){
+
+document.getElementById("inputnumber").value="";
+console.log("clear");
+}
+
+</script>
+
+</body>
+</html>

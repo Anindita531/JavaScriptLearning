@@ -1,0 +1,48 @@
+
+<!DOCTYPE html>
+<html lang="eng">
+<head>
+<style>
+body{
+background-color:white;
+margin :100px;
+}
+.output{
+background-color:white;
+ color:#fda;
+}
+#btn{
+padding :25px;
+ color:#fd33da;
+border-radius :50%;
+}
+</style>
+</head>
+<div id='output' >
+    <button id='btn'onClick="square()">Square Here</button>
+     <button id='btn'onClick="cube()">Cube Here</button>
+</div>
+<body>
+    <script>
+        //Task 1 → Functions
+
+//Make a function square(num) → returns square of a number.
+function square(num) {
+
+    num=Number(prompt("Enter Number:"));
+try{
+    document.writeln(num*num);
+   }
+catch(error){
+document.writeln(error);
+} 
+}function cube(num) {
+    num=Number(prompt("Enter Number:"));
+    document.writeln(num*num*num);
+    
+}
+
+    </script>
+
+</body>
+</html>

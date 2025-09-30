@@ -1,0 +1,19 @@
+.clock {
+  width: 250px;
+  height: 250px;
+  border: 10px solid black;
+  border-radius: 50%;
+  position: relative;
+}
+.hand {
+  position: absolute;
+  width: 50%;
+  height: 4px;
+  background: black;
+  top: 50%;
+  transform-origin: 100%;
+  transform: rotate(90deg);
+}
+.hour { height: 6px; background: black; }
+.minute { height: 4px; background: blue; }
+.second { height: 2px; background: red; }

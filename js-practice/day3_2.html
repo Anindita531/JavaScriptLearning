@@ -1,0 +1,25 @@
+<hr>
+<h2>Movie List</h2>
+<div id="movieOutput"></div>
+
+<script>
+    let movies = ["Ghajini", "3 Idiots", "Kal Ho Naa Ho", "Taare Zameen Par"];
+    document.getElementById("movieOutput").innerHTML = `<b>Initial Movies:</b> ${movies.join(", ")}`;
+
+    // Add a movie
+    movies.push("Jawan");
+    document.getElementById("movieOutput").innerHTML += `<br><b>After Adding Jawan:</b> ${movies.join(", ")}`;
+
+    // Remove last movie
+    movies.pop();
+    document.getElementById("movieOutput").innerHTML += `<br><b>After Removing Last Movie:</b> ${movies.join(", ")}`;
+
+    // Object Example
+    let car = {
+        brand: "Suzuki",
+        model: "Swift",
+        price: 666666
+    };
+
+    document.getElementById("movieOutput").innerHTML += `<br><br><b>Car Details:</b> Brand: ${car.brand}, Model: ${car.model}, Price: ₹${car.price}`;
+</script>

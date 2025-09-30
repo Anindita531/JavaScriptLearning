@@ -1,0 +1,39 @@
+#clock {
+  font-size: 40px;
+  font-family: monospace;
+  background: black;
+  color: lime;
+  border: 2px solid red;
+  padding: 20px;
+  width: fit-content;
+  margin: 20px auto;
+  border-radius: 10px;
+}
+.clockcontainer{
+  width: 40rem;
+  height: 50vh;
+  box-shadow: 0 6px 7px rgba(81, 71, 179, 0.3);
+  
+  align-items: center;
+  justify-content: center;
+}
+
+h1{
+    margin: 150px auto;
+    font-size: 26px;
+    font-weight: bold;  
+    animation: gradient 3s ease-in-out infinite;
+    text-shadow: 2px 2px 4px rgb(12, 15, 204);
+}
+ @keyframes gradient {
+
+     0% {
+        color: rgb(255, 102, 0);
+    }
+    50% {
+        color: yellow;
+    }
+    100% {
+        color: rgb(255, 0, 106);
+    }
+}

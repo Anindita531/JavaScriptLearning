@@ -1,0 +1,19 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>jQuery Button</title>
+  <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+</head>
+<body>
+  <div id="app"></div>
+  <button id="btn">Click Me</button>
+
+  <script>
+    $(document).ready(function() {
+      $("#btn").click(function() {
+        $("#app").text("Button clicked with jQuery!");
+      });
+    });
+  </script>
+</body>
+</html>
