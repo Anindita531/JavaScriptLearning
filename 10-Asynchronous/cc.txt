@@ -1,0 +1,77 @@
+
+#include <bits/stdc++.h>
+using namespace std;
+
+int main() {
+    ios::sync_with_stdio(false);
+    cin.tie(nullptr);
+
+    int n;
+    if (!(cin >> n)) return 0;
+    string line;
+    getline(cin, line);  // consume endline
+
+    vector<vector<char>> grid(n, vector<char>(n, 'R'));
+    vector<vector<int>> gid(n, vector<int>(n, -1));
+    int sr = -1, sc = -1, dr = -1, dc = -1;
+    int nxt = 0;
+
+    for (int r = 0; r < n; ++r) {
+        getline(cin, line);
+        long long num = 0;
+        int c = 0;
+        for (char ch : line) {
+            if (isdigit(static_cast<unsigned char>(ch))) {
+                num = num * 10 + (ch - '0');
+            } else {
+                int L = (num == 0 ? 1 : (int)num);
+                num = 0;
+                for (int k = 0; k < L && c + k < n; ++k) {
+                    grid[r][c + k] = ch;
+                    if (ch == 'G') gid[r][c + k] = nxt;
+                }
+                if (ch == 'G') ++nxt;
+                c += L;
+                if (c >= n) break;
+            }
+        }
+
+        for (int j = 0; j < n; ++j) {
+            if (grid[r][j] == 'S') { sr = r; sc = j; }
+            else if (grid[r][j] == 'D') { dr = r; dc = j; }
+        }
+    }
+
+    const int INF = 1e9;
+    vector<vector<int>> dist(n, vector<int>(n, INF));
+    deque<pair<int,int>> dq;
+    dist[sr][sc] = 0;
+    dq.emplace_back(sr, sc);
+    int dirs[4][2] = {{1,0},{-1,0},{0,1},{0,-1}};
+
+    while (!dq.empty()) {
+        auto [r, c] = dq.front(); dq.pop_front();
+        if (r == dr && c == dc) break;
+        for (auto &d : dirs) {
+            int nr = r + d[0], nc = c + d[1];
+            if (nr < 0  nr >= n  nc < 0 || nc >= n) continue;
+            char ch = grid[nr][nc];
+            if (ch == 'R') continue;
+            int w = 0;
+            if (ch == 'G') {
+                int cur = (grid[r][c] == 'G') ? gid[r][c] : -1;
+                w = (gid[nr][nc] != cur) ? 1 : 0;
+            }
+            int nd = dist[r][c] + w;
+            if (nd < dist[nr][nc]) {
+                dist[nr][nc] = nd;
+                if (w == 0) dq.emplace_front(nr, nc);
+                else dq.emplace_back(nr, nc);
+            }
+        }
+    }
+
+    int ans = dist[dr][dc];
+    cout << (ans < INF ? ans : -1);
+    return 0;
+}

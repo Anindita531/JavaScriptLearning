@@ -1,0 +1,21 @@
+<input id="name" placeholder="Enter your name" />
+<button id="saveBtn">Save</button>
+<p id="greet"></p>
+<link rel="stylesheet" href="style1.css">
+<script>
+  const input = document.querySelector("#name");
+  const saveBtn = document.querySelector("#saveBtn");
+  const greet = document.querySelector("#greet");
+
+  // if saved name exists, show it
+  const savedName = localStorage.getItem("username");
+  if (savedName) {
+    greet.textContent = `Welcome back, ${savedName}!`;
+  }
+
+  // save new name
+  saveBtn.addEventListener("click", () => {
+    localStorage.setItem("username", input.value);
+    greet.textContent = `Hello, ${input.value}!`;
+  });
+</script>

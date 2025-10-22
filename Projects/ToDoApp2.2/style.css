@@ -1,0 +1,57 @@
+body.dark {
+  background-color: #222;
+  color: #eee;
+}
+
+.spinner {
+  border: 6px solid #f3f3f3;
+  border-top: 6px solid #3498db;
+  border-radius: 50%;
+  width: 40px;
+  height: 40px;
+  animation: spin 1s linear infinite;
+  margin: 10px auto;
+}
+
+@keyframes spin {
+  0% { transform: rotate(0deg); }
+  100% { transform: rotate(360deg); }
+}
+
+button {
+  cursor: pointer;
+  padding: 8px 12px;
+border: none; 
+  margin: 5px;
+  background-color: #3498db;
+}
+button:disabled {
+  cursor: not-allowed;
+  opacity: 0.6;
+  background-color: cadetblue
+}
+input[type="text"] {
+  padding: 8px;
+  width: 200px;
+  margin-right: 10px;
+}
+select {
+  padding: 8px;
+  margin-right: 10px;
+}
+.pagination-button {
+  padding: 6px 12px;
+  margin: 0 2px;
+}
+.pagination-button.active {
+  background-color: #3498db;
+  color: white;
+}
+.pagination-button:disabled {
+  background-color: #ccc;
+  color: #666;
+}
+
+#dataContainer {
+  margin-top: 20px;
+}

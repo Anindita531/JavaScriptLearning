@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Todo + Users App</title>
+  <link rel="stylesheet" href="style.css">
+  <script defer src="script.js"></script>
+</head>
+<body>
+<div id="app">
+  <h1>Todo + Users App</h1>
+  
+  <div>
+    <button id="loadDataBtn">Load Data</button>
+    <button id="refreshBtn">Refresh Data</button>
+    <button id="themeBtn">Toggle Dark Mode</button>
+  </div>
+  
+  <div>
+    <input type="text" id="searchInput" placeholder="Search Todos or Users">
+    <select id="userFilter">
+      <option value="all">All Users</option>
+    </select>
+    <select id="sortSelect">
+      <option value="default">Sort by Default</option>
+      <option value="title">Sort by Title</option>
+      <option value="status">Sort by Status</option>
+    </select>
+  </div>
+  
+  <div>
+    <input type="text" id="newTodoInput" placeholder="New Todo Title">
+    <select id="newTodoUser"></select>
+    <button id="addTodoBtn">Add Todo</button>
+    <button id="downloadBtn">Download JSON</button>
+  </div>
+
+  <div id="spinner" class="spinner" style="display:none;"></div>
+  <div id="dataContainer"></div>
+  <div id="pagination"></div>
+</div>
+</body>
+</html>

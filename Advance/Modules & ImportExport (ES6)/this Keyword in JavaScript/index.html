@@ -1,0 +1,50 @@
+<div id="carDashboard"></div>
+<script>
+// Car constructor
+function Car(brand) {
+    this.brand = brand;
+    this.speed = 0;
+
+    // Method to accelerate
+    this.accelerate = function() {
+        this.speed += 10;
+        console.log(`${this.brand} speed: ${this.speed} km/h`);
+    };
+
+    // Method to brake
+    this.brake = function() {
+        this.speed -= 5;
+        if(this.speed < 0) this.speed = 0;
+        console.log(`${this.brand} speed: ${this.speed} km/h`);
+    };
+}
+
+// Create car objects
+const car1 = new Car("Tesla");
+const car2 = new Car("BMW");
+
+// Add buttons dynamically
+const dashboard = document.querySelector("#carDashboard");
+
+[car1, car2].forEach(car => {
+    const carDiv = document.createElement("div");
+    carDiv.innerHTML = `<h3>${car.brand}</h3>
+        <button class="accelerate">Accelerate</button>
+        <button class="brake">Brake</button>
+        <p>Speed: <span>0</span> km/h</p>`;
+    dashboard.appendChild(carDiv);
+
+    const speedDisplay = carDiv.querySelector("span");
+
+    // Event listeners using 'this' inside method
+    carDiv.querySelector(".accelerate").addEventListener("click", function() {
+        car.accelerate();
+        speedDisplay.innerText = car.speed;
+    });
+
+    carDiv.querySelector(".brake").addEventListener("click", function() {
+        car.brake();
+        speedDisplay.innerText = car.speed;
+    });
+});
+</script>

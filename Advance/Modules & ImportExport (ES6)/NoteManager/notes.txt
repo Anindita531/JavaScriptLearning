@@ -1,0 +1,4 @@
+/project
+ ├── notes.js     → handles adding & deleting notes
+ ├── storage.js   → handles saving to localStorage
+ └── main.js      → connects UI & logic

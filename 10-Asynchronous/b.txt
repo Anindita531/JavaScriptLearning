@@ -1,0 +1,71 @@
+
+def main():
+    import sys
+    input = sys.stdin.readline
+
+    N = int(input())
+    commands = []
+
+    for _ in range(N):
+        parts = input().split()
+        existing = int(parts[0])
+        new = int(parts[1])
+        direction = parts[2]
+        commands.append((existing, new, direction))
+
+    target = int(input())
+
+    # Sort commands: first by existing cube, then new cube
+    commands.sort(key=lambda x: (x[0], x[1]))
+
+    # Maps cube number to its (x, y) position
+    cube_pos = dict()
+    # Maps position to cube number
+    pos_cube = dict()
+
+    # Start with the first cube in commands as origin (0,0)
+    first_existing = commands[0][0]
+    cube_pos[first_existing] = (0, 0)
+    pos_cube[(0, 0)] = first_existing
+
+    # Direction mapping
+    dir_map = {
+        'top': (0, 1),
+        'down': (0, -1),
+        'left': (-1, 0),
+        'right': (1, 0)
+    }
+
+    for existing, new, direction in commands:
+        if existing not in cube_pos:
+            # If existing cube not yet placed, skip (will be placed later)
+            continue
+        ex, ey = cube_pos[existing]
+        dx, dy = dir_map[direction]
+        nx, ny = ex + dx, ey + dy
+
+        # If a cube already exists at the new position, it is replaced
+        if (nx, ny) in pos_cube:
+            old_cube = pos_cube[(nx, ny)]
+            del cube_pos[old_cube]
+
+        # Place the new cube
+        cube_pos[new] = (nx, ny)
+        pos_cube[(nx, ny)] = new
+
+    # For the target cube, find neighbors
+    if target not in cube_pos:
+        print("-1 -1 -1 -1")
+        return
+
+    x, y = cube_pos[target]
+    neighbors = []
+    for d in ['top', 'down', 'left', 'right']:
+        dx, dy = dir_map[d]
+        nx, ny = x + dx, y + dy
+        neighbors.append(pos_cube.get((nx, ny), -1))
+
+    print(' '.join(map(str, neighbors)))
+
+if name == "main":
+    main()

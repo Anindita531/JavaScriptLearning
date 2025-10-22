@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Todo and User Data Viewer</title>
+    <link rel="stylesheet" href="style.css" />
+    <script src="script.js" defer></script>
+  </head>
+  <body>
+<div id="app">
+  <button id="loadDataBtn">Load Data</button>
+  <button id="refreshBtn">Refresh Data</button>
+  <input type="text" id="searchInput" placeholder="Search Todos or Users">
+  <button id="downloadBtn">Download JSON</button>
+
+  <div id="spinner" class="spinner" style="display:none;"></div>
+  <div id="dataContainer"></div>
+  <div id="pagination"></div>
+  </body>
+</div>
+</html>

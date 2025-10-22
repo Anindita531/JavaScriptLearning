@@ -1,0 +1,10 @@
+| Feature     | How                                          |
+| ----------- | -------------------------------------------- |
+| Load Users  | fetch + spinner                              |
+| Display     | DOM + appendChild                            |
+| Edit User   | prompt → update usersData → localStorage     |
+| Delete User | splice → update localStorage → refresh table |
+| Search      | filter array + displayUsers                  |
+| Export JSON | Blob + download                              |
+| Export CSV  | Blob + download                              |
+| Persistence | localStorage                                 |

@@ -1,0 +1,52 @@
+button {
+    padding: 10px;
+    background-color: darkorange;
+    cursor: pointer;
+    border: none;
+    border-radius: 6px;
+}
+
+button:hover {
+    background-color: wheat;
+}
+
+body {
+    background-color: aliceblue;
+    box-shadow: 0 3px 4px 5px rgba(245, 234, 67, 0.8);
+    margin: 300px;
+}
+
+input[type=text] {
+    border: 2px solid black;
+    padding: 15px;
+}
+
+.tooltip-container {
+    position: relative;
+    background-color: rgb(255, 255, 255);
+    width: 15px;
+    color: #0c0909;
+    height: 15px;
+    left: 0 ;
+    border: 0.2px dashed #fff1f1;
+    box-shadow: 0 4px 4px 4px rgba(182, 182, 182, 0.8);
+    cursor: pointer;
+    text-align: center;
+    border-radius: 50%;
+}
+
+.tooltip {
+    position: absolute;
+    background-color: #000000;
+    color: #fff;
+    padding: 4px 4px;
+    border-radius: 5px;
+    opacity: 0;
+    transition: opacity 0.3s ease;
+    white-space: nowrap;
+   
+}
+
+.tooltip-container:hover .tooltip {
+    opacity: 1;
+}

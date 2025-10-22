@@ -1,0 +1,99 @@
+
+body{
+
+background-size:cover ;
+ background-repeat :no-repeat;
+ padding-top:160px;
+bacground-color:#d5d7d;
+}
+.container{
+color:gray ;
+padding :0;
+ alignment:center;
+border-left-color:blue;
+bacground-color:#f9f9f9;
+box-shadow:0 3px 6px rgba(0,0.4,35,0.4);
+  padding-top:  50px;            
+  margin: 20px;
+ border-radius :10px;
+ overflow :hidden;
+}
+p{padding-left:160px;
+}
+h2{
+ font-size:17px;
+text-shadow:0 2px 5px #cdf,0 8px 5px #0ff;
+padding-left:360px;
+font-style :italic;
+color:black;
+
+}
+.fas.fa-heartbeat
+{
+ font-size: 20px; color: red; animation :blinkcolor 3s infinite ;
+}
+span{
+ text-shadow:0 2px 5px #40bcdf,0 8px 5px #f4f3f8;
+ font-size: 20px; color:blue; font-style :italic; 
+ font-style :italic;animation :blinkcolor 3s infinite ;
+}
+ header{
+color:black;
+bacground-color:#fbc67f;
+box-shadow:0 3px 6px rgba(0,0.4,35,0.4);
+ font-size:30px;
+text-shadow:0 4px 5px #246,0 4px 5px #000;
+
+position :relative;
+padding-top :80px
+}
+@keyframes blinkcolor{
+0%{color:#fbc45e;text-shadow:0 4px 5px #fbc45e},
+25%{color:#f4f3f8;text-shadow:0 4px 5px #f4f3f8},
+50%{color:#8bcfbe ;text-shadow:0 4px 5px #8bcfbe},
+75%{color:#5bdfbe;text-shadow:0 4px 5px #5bdfbe},
+100%{color:#f7bd5e;text-shadow:0 4px 5px #f7bd5e}
+}@keyframes fadeinout {
+0%{opacity:0},
+10%{opacity:1 },
+20%{opacity: 0},
+30%{opacity:1},
+40%{opacity:1},
+50%{opacity:0},
+60%{opacity:1 },
+70%{opacity:1},
+80%{opacity:0},
+100%{opacity:1}
+}
+.quote{
+color:black;
+display:flex;
+ overflow :hidden;
+box-shadow:0 3px 6px rgba(0,3.5,35,0.4);
+ font-size:20px;
+  border-radius :10px;
+animation :fadeinout 10s infinite ;   
+  font-style: italic;
+}
+.q2{
+animation-delay: 5s;color:green;
+border-left: 5px solid #d86b5c; 
+}.q3{
+animation-delay: 8s;color: purple;
+border-left: 6px solid #debffc;
+}
+.q1{
+animation-delay: 4s;color:red;border-left: 5px solid #c88fac;
+}
+@media{
+heigh:600px;
+width :400px;
+}
+footer{
+  padding-bottom :   130px;
+color :white;
+text-align:center;
+background-color:#0f000f; 
+
+
+}

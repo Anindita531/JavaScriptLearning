@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <style>
+    button{
+      padding: 20px 30px;
+      background-color: skyblue;
+      cursor: pointer;
+      font-size: 16px;
+      border: none;
+      border-radius: 5px;
+    }
+  </style>
+</head>
+<body>
+
+<button onclick="showData()">Fetch Data</button>
+
+<script>
+function fetchData() {
+  return new Promise(resolve => {
+    setTimeout(() => resolve("User data received ✅"), 2000); // resolve with message
+  });
+}
+
+async function showData() {
+  alert("Loading..."); // show immediately
+
+  const data = await fetchData(); // waits 2 seconds asynchronously
+  alert(data); // show the result
+}
+</script>
+
+</body>
+</html>

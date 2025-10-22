@@ -1,0 +1,17 @@
+body {
+    background: #a10252;
+    margin: 200px;
+}
+
+.quote-box {
+  margin: 20px 0;
+  padding: 15px;
+  border-left: 5px solid #0077cc;
+  background-color: #f0f8ff;
+}
+
+.author {
+  text-align: right;
+  font-style: italic;
+  color: #555;
+}

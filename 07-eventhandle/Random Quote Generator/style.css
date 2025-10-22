@@ -1,0 +1,60 @@
+body {
+    background: #a10252;
+    margin: 200px;
+}
+
+#quoteDisplay {
+    height: 20vh;
+    position: sticky;
+    width: 45vw;
+    padding: 25px;
+    font-size: 2svi;
+    align-self: center;
+    border-right: 5px solid rgba(25, 0, 255, 0.856);
+    box-shadow: 0 1px 4px 5px rgba(10, 62, 139, 0.4);
+    background-color: rgb(151, 214, 216);
+    border-radius: 20px;
+}
+
+p {
+    margin-bottom: 10%;
+}
+
+#nextBtn {
+
+    cursor: pointer;
+    border-radius: 5px;
+    border: none;
+    box-shadow: 0 3px 3px 3px rgba(97, 91, 1, 0.8);
+    background-color: rgba(238, 201, 79, 0.884);
+    padding: 10px;
+}
+
+#generateBtn {
+    cursor: pointer;
+    background-color: rgb(214, 106, 5);
+    padding: 15px;
+    border-radius: 20px;
+    border: none;
+}
+
+h2 {
+    text-align: center;
+    text-shadow: rgb(181, 184, 7);
+    font-style: italic;
+}
+
+.Quote-container {
+    height: 40vh;
+    position: sticky;
+    width: 50vw;
+    display: flex;
+    border-radius: 20px;
+    background-color: rgba(245, 245, 245, 0.932);
+    flex-direction: column;
+    box-shadow: 0 4px 5px 5px rgba(14, 3, 165, 0.089);
+}
+
+#generateBtn:hover {
+    background-color: aqua;
+}

@@ -1,0 +1,21 @@
+<div id="parent" style="padding:20px; background:lightblue;">
+  Parent Div
+  <button id="child" style="margin:10px;">Click Me</button>
+</div>
+
+<p id="log"></p>
+
+<script>
+  const parent = document.getElementById("parent");
+  const child = document.getElementById("child");
+  const log = document.getElementById("log");
+
+  parent.addEventListener("click", function () {
+    log.innerHTML += "<br>Parent Div Clicked";
+  });
+
+  child.addEventListener("click", function (event) {
+    log.innerHTML += "<br>Child Button Clicked";
+    event.stopPropagation(); // 👈 stops event from reaching parent
+  });
+</script>

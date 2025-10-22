@@ -1,0 +1,21 @@
+    body { font-family: Arial; padding: 20px; }
+    table { width: 100%; border-collapse: collapse; margin-top: 20px; }
+    th, td { border: 1px solid #ccc; padding: 10px; text-align: left; }
+    .spinner {
+      border: 6px solid #f3f3f3;
+      border-top: 6px solid #3498db;
+      border-radius: 50%;
+      width: 40px;
+      height: 40px;
+      animation: spin 1s linear infinite;
+      display: none;
+      margin: 20px auto;
+    }
+    @keyframes spin {
+      0% { transform: rotate(0deg);border-top: 8px solid #888d91; }
+      100% { transform: rotate(360deg);border-top: 8px solid #166296; }
+    }
+    button { padding: 5px 10px; cursor: pointer; }
+    input { padding: 5px; margin: 5px 0; }
+    #userTableContainer { display: none; }
+  

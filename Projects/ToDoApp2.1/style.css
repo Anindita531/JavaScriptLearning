@@ -1,0 +1,49 @@
+.spinner {
+  border: 6px solid #f3f3f3;
+  border-top: 6px solid #3498db;
+  border-radius: 50%;
+  width: 40px;
+  height: 40px;
+  animation: spin 1s linear infinite;
+  margin: 10px auto;
+}
+
+@keyframes spin {
+  0% { transform: rotate(0deg); }
+  100% { transform: rotate(360deg); }
+}
+
+.card {
+  border: 1px solid #ccc;
+  padding: 10px;
+  margin: 5px;
+  border-radius: 5px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.card button {
+  margin-left: 5px;
+}
+
+.completed {
+  text-decoration: line-through;
+  color: green;
+}
+button {
+  padding: 5px 10px;
+  margin: 5px;
+  cursor: pointer;
+  background-color: violet;
+  border: none;
+  color: white;
+}
+button:hover {
+  background-color: purple;
+}
+#pagination {
+  margin-top: 10px;
+  text-align: center;
+  background-color: bisque;
+}

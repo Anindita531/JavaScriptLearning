@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Smart Feedback Form</title>
+<style>
+  body { font-family: Arial; padding: 20px; }
+  form { border: 2px solid #ccc; padding: 20px; border-radius: 8px; width: 300px; }
+  #popup { background: lightgreen; padding: 15px; display: none; border-radius: 8px; margin-top: 10px; }
+</style>
+</head>
+<body>
+
+<form id="feedbackForm">
+  <h3>Feedback Form</h3>
+  <label>Name: <input type="text" id="name" required></label><br><br>
+  <label>Feedback: <textarea id="feedback" required></textarea></label><br><br>
+  <button type="submit">Send</button>
+</form>
+
+<div id="popup">Thank you for your feedback 💚</div>
+
+<script>
+  const form = document.getElementById("feedbackForm");
+  const popup = document.getElementById("popup");
+
+  form.addEventListener("submit", function(event) {
+    event.preventDefault(); // prevent form reload
+    popup.style.display = "block"; // show thank-you popup
+  });
+
+  // Stop popup click from closing form accidentally
+  popup.addEventListener("click", function(event) {
+    event.stopPropagation();
+    alert("Popup clicked but form not affected 😎");
+  });
+
+  // Whole page click hides popup
+  document.body.addEventListener("click", function() {
+    popup.style.display = "none";
+  });
+</script>
+
+</body>
+</html>

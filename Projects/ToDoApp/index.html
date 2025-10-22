@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>User Management</title>
+ <link rel="stylesheet" href="style.css">
+<link href="https://cdn.jsdelivr.net/npm/bootstrap-icons/font/bootstrap-icons.css" rel="stylesheet"></head>
+<body>
+
+<h2>User Management</h2>
+<button id="loadBtn">Load Users</button>
+<input type="text" id="searchInput" placeholder="Search by Name or Email">
+<button id="saveJsonBtn">Save JSON</button>
+<button id="saveCsvBtn">Save CSV</button>
+<div class="spinner" id="spinner"></div>
+
+<table id="userTable">
+  <thead>
+    <tr><th>ID</th><th>Name</th><th>Email</th><th>Actions</th></tr>
+  </thead>
+  <tbody></tbody>
+</table>
+<button id="insertUserBtn"><i class="bi bi-plus-lg"></i>Add</button>
+<button id="deleteAllBtn"><i class="bi bi-trash"></i>Delete All</button>
+<button id="uploadToLoadUser"><i class="bi bi-upload"></i>Upload</button>
+<script src="app.js"></script>
+</body>
+</html>
