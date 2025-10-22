@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Vanilla JS Button</title>
+<style>
+#btn{
+padding:10px;
+cursor:pointer;
+background:#33d;
+}
+</style>
+</head>
+<body>
+  <div id="app"></div>
+  <button id="btn">Click Me</button>
+
+  <script>
+    document.getElementById("btn").addEventListener("click", function() {
+      document.getElementById("app").innerHTML = "Button clicked with Vanilla JS!";
+    });
+  </script>
+</body>
+</html>

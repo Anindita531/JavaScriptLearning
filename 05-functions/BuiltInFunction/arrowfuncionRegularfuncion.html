@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>This Difference Example</title>
+</head>
+<body>
+  <button id="btn1">Regular Function</button>
+  <button id="btn2">Arrow Function</button>
+
+  <script>
+    // Regular Function
+    document.querySelector("#btn1").addEventListener("click", function() {
+      console.log("Regular:", this); // 👈 'this' = button element
+      this.style.background = "lightgreen"; // ✅ Works fine
+    });
+
+    // Arrow Function
+    document.querySelector("#btn2").addEventListener("click", () => {
+      console.log("Arrow:", this); // 👈 'this' = Window (not the button)
+      // this.style.background = "lightblue"; // ❌ Will cause error
+      alert("Arrow function this = " + this); // just to show behavior
+    });
+  </script>
+</body>
+</html>
